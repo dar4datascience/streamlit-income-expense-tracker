@@ -3,13 +3,13 @@ from deta import Deta  # pip install deta
 
 
 # Load the environment variables
-DETA_KEY = st.secrets["DETA_KEY"]
+DETA_KEY = st.secrets["DETA_demo_KEY"]
 
 # Initialize with a project key
 deta = Deta(DETA_KEY)
 
 # This is how to create/connect a database
-db = deta.Base("monthly_reports")
+db = deta.Base("expenses-demo")
 
 
 def insert_period(period, incomes, expenses, comment):
